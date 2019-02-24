@@ -7,8 +7,8 @@ MAINTAINER Team PiggyCoin <team@piggy-coin.com>
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
  && apk-install --update python3 python3-dev leveldb-dev build-base git \
  && pip3 install --upgrade --no-cache-dir pip setuptools aiohttp pylru plyvel x11_hash \
- && git clone https://github.com/TeamPiggyCoin/electrumx.git / \
- && cd / \
+ && git clone https://github.com/TeamPiggyCoin/electrumx.git /electrumx \
+ && cd /electrumx \
  && python3 setup.py install \
  && apk del build-base git \
  && adduser -D -g "" electrumx
