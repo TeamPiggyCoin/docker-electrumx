@@ -5,4 +5,4 @@ mkdir -p /home/electrumx/leveldb
 export DB_DIRECTORY=/home/electrumx/leveldb
 chown -R electrumx:electrumx /home/electrumx
 
-exec su electrumx -c 'python3 /electrumx/electrum_server'
+exec su electrumx -c 'python3 /electrumx/electrumx_server'
