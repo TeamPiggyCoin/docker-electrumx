@@ -1,10 +1,10 @@
-[![](https://images.microbadger.com/badges/image/teampiggycoin/piggyelectrum-server.svg)](https://microbadger.com/images/teampiggycoin/piggyelectrum-server "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/teampiggycoin/electrumx.svg)](https://microbadger.com/images/teampiggycoin/electrumx "Get your own image badge on microbadger.com")
 
-This is a trusted build on the [DockerHub repository](https://hub.docker.com/r/teampiggycoin/piggyelectrum-server/).
+This is a trusted build on the [DockerHub repository](https://hub.docker.com/r/teampiggycoin/electrumx/).
 
 To run:
 
-docker run -d -v /home/electrum:/home/electrum -p 54485:50001 --link piggycoind:piggycoind --name piggyelectrum teampiggycoin/piggyelectrum-server
+docker run -d -v /home/electrumx:/home/electrumx -p 54485:50001 --link piggycoind:piggycoind --name piggyelectrumx teampiggycoin/electrumx
 
 Notes:
 
