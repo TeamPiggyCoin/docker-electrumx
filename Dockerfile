@@ -3,6 +3,8 @@
 FROM qlustor/alpine-runit:3.8
 MAINTAINER Team PiggyCoin <team@piggy-coin.com>
 
+ENV DB_DIRECTORY=/home/electrumx/leveldb
+
 ADD . /
 
 # Install Python 3.x
