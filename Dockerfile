@@ -3,7 +3,8 @@
 FROM qlustor/alpine-runit:3.8
 MAINTAINER Team PiggyCoin <team@piggy-coin.com>
 
-ENV DB_DIRECTORY=/home/electrumx/leveldb
+ENV DB_DIRECTORY /home/electrumx/leveldb
+ENV ALLOW_ROOT 1
 
 ADD . /
 
@@ -15,9 +16,8 @@ RUN chmod +x /etc/service/electrumx/run \
  && git clone https://github.com/TeamPiggyCoin/electrumx.git /electrumx \
  && cd /electrumx \
  && python3 setup.py install \
- && apk del build-base git \
- && adduser -D -g "" electrumx
+ && apk del build-base git
  
-EXPOSE 5001 5002 8000
+EXPOSE 50001 50002
 VOLUME /home/electrumx
 ENTRYPOINT ["/sbin/runit-docker"]
