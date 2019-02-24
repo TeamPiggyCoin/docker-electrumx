@@ -13,7 +13,8 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
  && apk del build-base git \
  && adduser -D -g "" electrumx
 ADD . /
-
+RUN chmod +x /etc/service/electrumx/run
+ 
 EXPOSE 5001 5002 8000
 VOLUME /home/electrumx
 ENTRYPOINT ["/sbin/runit-docker"]
